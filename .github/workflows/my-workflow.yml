@@ -14,3 +14,14 @@ jobs:
         run: ls -a
       - name: run Node.js File
         run: node app.js
+  my-second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print all system info
+        run: |
+          lsb_release -a
+          uname -r
+          lscpu
+          nproc
+          free -h
+          lsblk
