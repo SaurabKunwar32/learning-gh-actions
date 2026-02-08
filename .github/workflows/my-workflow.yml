@@ -9,6 +9,9 @@ jobs:
       - name: Print working directory
         run: pwd
       - name: Checkout repo
-        uses: actions/checkout@6.0.2
+        uses: actions/checkout@v6.0.2
       - name: List all files
         run: ls -a
+      - name: Print workflow file contents
+        run: cat ./.github/workflows/my-workflow.yml
+    
