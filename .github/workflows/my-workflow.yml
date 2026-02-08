@@ -1,25 +1,29 @@
 name: My first workflow
 on: [push, workflow_dispatch]
 jobs:
-  # my-first-job:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: List all files
-  #       run: ls -a
-  #     - name: Print working directory
-  #       run: pwd
-  #     - name: Checkout repo
-  #       uses: actions/checkout@v6.0.2
-  #     - name: List all files
-  #       run: ls -a
-  #     - name: Print workflow file contents
-  #       run: cat ./.github/workflows/my-workflow.yml
+#   my-first-job:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: List all files
+#         run: ls -a
+#       - name: Print working directory
+#         run: pwd
+#       - name: Checkout repo
+#         uses: actions/checkout@v6.0.2
+#       - name: List all files
+#         run: ls -a
+#       - name: Print workflow file contents
+#         run: cat ./.github/workflows/my-workflow.yml
   my-second-job:
     runs-on: ubuntu-latest
     steps:
       - name: Print Nodejs version
         run: node -v
-      - name: Install Nodejs new version
+      - name: Install Nodejs new version 24
+        with:
+             node-version: '24'
         uses:  actions/setup-node@v6
+      - name: Print Nodejs version
+        run: node -v
     
     
